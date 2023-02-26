@@ -1,4 +1,104 @@
-html {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+} */
+
+.header {
+    box-shadow: 0px 4px 21px -1px rgba(34, 60, 80, 0.13);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.menu_link {
+    color: #54a8b3; 
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.logo_img {
+    width: 130px;
+}
+
+.menu {
+    display: flex;
+    font-size: 18px;
+}
+
+.menu li {
+    padding: 5px 15px;
+}
+
+.menu li a:hover {
+    transition: all .3s;
+    color: #097685;
+}
+
+#checkbox_toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    background-color: #54a8b3;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+    background-color: #54a8b3;
+    display: block;
+    content: '';
+    position: absolute;
+    transition: all .3s;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburger-line::before {
+    top: 7px;
+}
+
+.hamburger-line::after {
+    top: -7px;
+}
+
+
+
+
+/* html {
     box-sizing: border-box;
 } 
 
@@ -15,10 +115,10 @@ a {
 
 body {
     font-family: 'Roboto Flex', sans-serif;
-    margin: 0;
-}
+    margin: 0; */
+/* } */
 
-.container {
+/* .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px; 
@@ -35,10 +135,10 @@ body {
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-}
+} */
 
 /* burger-menu */
-.header__burger-btn {
+/* .header__burger-btn {
     display: none;
     position: relative;
     width: 40px;
@@ -93,11 +193,15 @@ body {
     color: #54a8b3; 
     font-size: 18px;
     text-transform: uppercase;
-}
+} */
 
 /* slider */
-.carusel .container {
-    margin-top: 10px;
+.carousel .container {
+    margin: 10px auto;
+    max-width: 1200px;
+        /* margin: 0 auto; */
+    padding: 0 20px 30px 20px; 
+    
 }
 .slider {
     margin: 0 auto;
@@ -131,6 +235,7 @@ body {
     position: absolute;
     right: 0;
     text-align: center;
+    
 }
 a.slide_btn {
     color: #8dc4cb;
@@ -153,12 +258,23 @@ a.slide_btn {
     padding-top: 30px;
     padding-bottom: 20px;
 }
+.welcome .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px; 
+}
 .welcome-pharase {
     text-align: center;
     font-size: 50px;
     letter-spacing: 2px;
     font-weight: bold;
     color: #097685;
+}
+
+.line .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 60px 20px;  */
 }
 .lines {
     display: flex;
@@ -183,18 +299,22 @@ a.slide_btn {
     font-style: italic;
     color: #54a8b3; 
     margin-top: 10px;
+    padding: 30px 0 10px 0;
 }
 .fraza {
     align-self: flex-start;  
+    text-align: justify;
     font-size: 18px; 
     padding-left: 200px;
     padding-right: 180px;
+    line-height: 1.2em;
 }
 #skerderud {
     align-self: flex-end;
     font-size: 13px; 
     margin-top: 0;
     padding-right: 350px;
+    line-height: 3em;
 }
 
 h3 {
@@ -229,8 +349,12 @@ h2 {
     height: 500px;
     background-color: rgba(255, 143, 177, 0.1);
 }
+.event-subtitle {
+    text-align: center;
+}
 .event-text {
     font-size: 15px;
+    text-align: justify;
 }
 .card-event ul {
     padding: 5px 20px;
@@ -286,9 +410,11 @@ h2 {
 
 /* footer */
 .footer {
-    height: 20vh;
+    height: 23vh;
     background-color:  #54a8b3; 
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
 }
 .footer .container {
     display: flex;
@@ -316,6 +442,14 @@ h2 {
     font-size: 15px;
     text-indent: 0;
 }
+.container-address-footer {
+    display: flex;
+    color: white;
+}
+.address-footer {
+    font-size: 18px;
+    padding: 20px;
+}
 
 /* button back-to-top */
 .topbutton {
@@ -330,34 +464,34 @@ h2 {
 
 
 /* eventOne.html, eventTwo, eventThree */
-.events .container {
+.events .container, .meetings .container {
     max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 .event_about {
     display: flex;
+    flex-direction: column;
+    /* align-items: self-start; */
+    justify-content: flex-start;
+    width: 100%;
 }
 .event-subtitle {
-    font-size: 22px;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 .event_text {
     font-size: 20px;
     padding: 0 30px;
+    text-align: justify;
 }
-.event_about_one {
-    display: flex;
-    flex-direction: column;
-}
-.event_about_one h4 {
+.event_about h4 {
     font-size: 23px;
     color: #12195E;
     align-self: center;
 }
-.event_about_text {
-    margin-left: 40px;
-}
-.event_about_one li {
+.event_about li {
     list-style-type: none;
     font-size: 18px;
 }
@@ -368,19 +502,14 @@ h2 {
     margin-left: 140px; 
     align-self: self-start;
 }
-.meetings .container {
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-}
 .title_meetings {
     display: flex;
     justify-content: center;
 }
 .meetings-list li {
     list-style-type: none;
-    line-height: 30px;
     font-size: 20px;
+    text-align: justify;
 }
 .meetings-item  {
     font-weight: bolder;
@@ -415,34 +544,32 @@ h2 {
 .home .container {
     margin: 50px;
 }
-
 .home .homePage {
     font-size: 14px;
     margin-left: 50px;
     color: #545664;
     text-decoration: none;
 }
-
+.main .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .main {
     margin-top: 60px;
 }
 .main-info {
     margin: 20px 0;
 }
-
 .main-info p {
     font-size: 20px;
-    /* color: #09192f; */
     text-align: justify;
     text-indent: 30px;
     padding: 5px 0;
     line-height: 1.5em;
-    /* letter-spacing: 1.2px; */
 }
 .main-info-foto {
     display: flex;
     margin: 20px 0;
-
 }
 .main-foto img {
     width: 350px;
@@ -451,21 +578,16 @@ h2 {
     box-shadow: 1px 1px 15px 5px #74b4a3;
     margin: 10px;
 }
-
 .main-text {
     margin-left: 30px;
 }
-
 .main-text p {
     font-size: 20px;
-    /* color: #09192f; */
     text-align: justify;
     text-indent: 30px;
     padding: 5px 0;
     line-height: 1.5em;
-    /* letter-spacing: 1.2px; */
 }
-
 .principles .container {
     display: flex;
     justify-content: center;
@@ -500,7 +622,6 @@ h2 {
     flex-wrap: wrap;
     margin: 50px 0;
 }
-
 .imgPsy {
     display: flex;
     flex-direction: column;
@@ -512,34 +633,28 @@ h2 {
     margin: 10px;
     box-shadow: 1px 1px 15px 5px #74b4a3;
 }
-
 .imgPsy:hover {
     transform: scale(1.04); 
     transition: transform 0.8s;
 }
-
 .specialist {
     width: 270px;
     height: 390px;
     border-radius: 20px;
 }
-
 .imgPsy a {
     text-decoration: none;
 }
-
 .psychologistHeading {
     align-self: center;
     font-size: 23px;
     color: #ff8fb1;
     padding: 20px 0;
 }
-
 .psychologistText {
     align-self: center;
     justify-content: center;
     font-size: 18px;
-    /* letter-spacing: 1.2px; */
     font-weight: lighter;
     color: #12195E;
 }
@@ -555,20 +670,18 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
-
 .psyHeading {
     color: #ff8fb1;
     font-size: 35px;
     padding-top: 30px;
     font-weight: bolder;
 }
-
 .psychologistText {
     text-indent: 0;
-    margin: 20px 0;
+    margin: 20px auto;
     font-size: 21px;
+    text-align: center;
 }
-
 
 /* container foto+prof.dejatelnost */
 .container-specialistAbout {
@@ -576,14 +689,12 @@ h2 {
     justify-content: center;
     margin: 0 auto; 
 }
-
 .container-specialistAbout .container {
     align-items: center;
     margin-top: 30px;
 }
 
 /* foto */
-
 .psySpecialist {
     margin-left: 80px;
     width: 330px;
@@ -608,13 +719,11 @@ h2 {
     padding: 20px ;
     width: 90%;
 }
-
 .psyTop {
     font-size: 23px;
     color: #12195E;
     text-align: center;
 }
-
 .containerPsyInfo {
     display: flex;
     width: 90%;
@@ -625,12 +734,10 @@ h2 {
     flex-direction: column;
     width: 90%;
 }
-
 .psyInfoLink {
-    /* color: #12195E; */
     font-size: 17px; 
-    /* letter-spacing: 1.2px; */
     padding: 5px;
+    text-align: justify;
 }
 
 /* education */
@@ -639,16 +746,13 @@ h2 {
     justify-content: center;
     margin: 0 auto; 
 }
-
 .education .container {
     align-items: center;
     margin-top: 30px;
 }
-
 .boxPsyInfoLink {
     margin: 40px 70px;
 }
-
 
 /* credo */
 .credo {
@@ -656,7 +760,6 @@ h2 {
     justify-content: center;
     margin: 0 auto;  
 }
-
 .credo .container {
     display: flex;
     flex-direction: column;
@@ -665,7 +768,6 @@ h2 {
     border-radius: 20px;
     padding: 40px 70px;
 }
-
 .psyTopCredo {
     font-size: 20px;
     color: #12195E;
@@ -673,16 +775,13 @@ h2 {
     text-indent: 0;
     padding: 10px;
 }
-
 .psyCredo {
     font-size: 18px;
-    /* letter-spacing: 1.2px; */
     color: #12195E;
     text-indent: 0;
     line-height: 1.5em;
     text-align: justify;
 }
-
 
 /* diplom.html */
 .diplom {
@@ -690,19 +789,16 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
-
 .boxPsyDiplom {
     display: flex;
     flex-wrap: wrap;
     margin: 50px 70px;
     justify-content: center;
 }
-
 .boxPsyDiplom img {
     width: 450px;
     padding: 10px;
 }
-
 .diplom-long {
     width: 300px;
 }
@@ -714,7 +810,6 @@ h2 {
     margin: 50px 70px;
     justify-content: center;
 }
-
 .boxImg {
     margin: 10px 17px;
     position: relative;
@@ -724,14 +819,12 @@ h2 {
     transform: scale(1.1); 
     transition: transform 0.5s;
 }
-
 .blogImg {
     width: 450px;
     height: 290px;
     border-radius: 20px;
     box-shadow: 1px 1px 15px 5px #74b4a3;
 }
-
 .blogText {
     position: absolute;
     top: 60%;
@@ -745,34 +838,28 @@ h2 {
 
 /* blog-article */
 .blog .container {
-    margin-bottom: 50px;
+    width: 1200px;
+    margin: 0 auto 50px auto;
 }
-
 .article {
     font-size: 18px;
-    /* color: #12195E; */
     text-align: justify;
-    text-indent: 40px;
     margin-top: 0;
     line-height: 1.5em;
 }
-
 .left-right .container {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 70px;
+    margin: 10px auto 70px auto;
 }
-
 .blog ul {
     list-style: none;
 }
-
 .articleBlock {
     border-radius: 20px;
     background-color: #8FBDD3;
     padding: 50px 70px 40px 50px;
 }
-
 .shopping-item {
     padding: 5px;
     font-size: 18px;
@@ -781,33 +868,31 @@ h2 {
     font-size: 20px;
 }
 
-
 /* b2b.html b2c.html */
 .titles h2 {
     margin-bottom: 50px;
 }
-
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .b2b-cards {
     display: flex;
     flex-direction: column;
 }
-
 .b2b-card {
     display: flex;
     margin: 13px 0;
 }
-
 .b2b-image img {
     width: 450px;
     height: 300px;
     border-radius: 20px;
     box-shadow: 1px 1px 15px 5px #74b4a3;
 }
-
 .b2b-about {
     padding: 20px 0 20px 30px;
 }
-
 .b2b-about h5 {
     font-size: 23px;
     letter-spacing: 1.2px;
@@ -816,7 +901,6 @@ h2 {
     text-indent: 25px;
     margin-bottom: 10px;
 }
-
 .b2b-about p {
     font-size: 18px;
     line-height: 1.5em;
@@ -829,14 +913,16 @@ h2 {
 }
 
 /* b2bServices.html, b2cServices.html,  about */
-
+.service-about .container {
+    width: 1200px;
+    margin: 0 auto;
+}
 .service-picture {
     display: flex;
     justify-content: center;
     position: relative;
     text-align: center; 
 }
-
 .service-picture h4 {
     position: absolute;
     bottom: 35px;
@@ -845,56 +931,48 @@ h2 {
     color: #12195E;
     letter-spacing: 1.2px;
 }
-
 .service-picture img {
     width: 500px;
     height: 330px;
     border-radius: 20px;
     box-shadow: 1px 1px 15px 5px #74b4a3;
 }
-
 .service-picture  hr {
     width: 40%;
     position: absolute;
     border: 1px solid #74ebd5;
     bottom: 25px;
 }
-
 .service-text {
     margin: 60px 0;
     display: flex;
     flex-direction: column;
 }
-
 .service-text p {
     font-size: 20px;
     line-height: 1.5em;
     text-align: justify;
 }
-
 .service-text .who {
     text-align: end;
     font-style: italic;
     font-size: 16px;
     margin-bottom: 20px;
 }
-
 .service-tabel {
-display: flex;
-justify-content: center;
-margin: 0 auto;  
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;  
 }
-
 .service-tabel .container {
-display: flex;
-flex-direction: column;
-background-color: #8FBDD3;
-margin: 0 70px;
-border-radius: 20px;
-padding: 40px;
-color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #8FBDD3;
+    margin: 0 70px;
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
 }
-
 .service-tabel  li {
     padding: 5px;
     margin: 0 30px;
@@ -904,8 +982,10 @@ color: white;
 
 /* contact form */
 .contacts .container {
+    width: 1200px;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 .contacts-smalForm {
     display: flex;
@@ -942,7 +1022,6 @@ label {
     font-size: 18px;
     color: #12195E;
 }
-
 .text-input {
     background-color: #ffffff;
     border: none;
@@ -955,7 +1034,6 @@ label {
     border-radius: 15px;
     font-family: 'Roboto Flex', sans-serif;
 }
-
 .text-input-message {
     background-color: #ffffff;
     border: none;
@@ -968,7 +1046,6 @@ label {
     border-radius: 20px;
     font-family: 'Roboto Flex', sans-serif;
 }
-
 .btnContacts {
     align-self: center;
     background-color: #C1F8CF;
@@ -982,7 +1059,6 @@ label {
     margin: 10px; 
     box-shadow: 1px 1px 15px 5px #74b4a3;
 }
-
 .btnContacts:hover {
     background-color: #1972A4;
     color: #ffffff;
@@ -990,12 +1066,11 @@ label {
     transition: transform 0.5s;
     background: linear-gradient(to right, #5f6479, #74ebd5);
 }
-
 .containerAddress {
     display: flex;
     flex-direction: column;
+    width: 650px;
 }
-
 .telephoneContact {
     display: flex;
     flex-direction: column;
@@ -1006,7 +1081,6 @@ label {
     padding: 30px 20px;
     margin: 0 10px; 
 }
-
 .addressMap {
     display: flex;
     flex-direction: column;
@@ -1017,7 +1091,6 @@ label {
     padding: 30px;
     margin: 20px 10px; 
 }
-
 .address {
     font-size: 18px;
     color: #12195E;
@@ -1026,7 +1099,6 @@ label {
     font-style: none;
     padding: 5px;
 }
-
 .map {
     width: 500px;
     margin: 10px;
@@ -1037,7 +1109,6 @@ label {
 .formContactUs-events {
     width: 500px;
 }
-
 select {
     background-color: #ffffff;
     border: none;
@@ -1067,12 +1138,11 @@ option {
 }
 
 
-
 @media all and (max-width: 1024px) {
     .container {
         max-width: 900px;
     }
-
+   
     .welcome-pharase {
         font-size: 40px;
     }
@@ -1084,6 +1154,31 @@ option {
     .logo_img {
         width: 100px;
     }
+
+    .main .container {
+        max-width: 900px;
+    }
+    .principles .container, .services .container,
+    .specialists .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .events .container, .meetings .container {
+        max-width: 900px;
+    }
+    .event-subtitle { 
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .event_text {
+        padding: 0;
+    }
+    .aboutUs {
+        align-self: center;
+        width: 900px;
+        margin: 10px auto;
+    }
     
     .containerPsyAbout {
         margin: 0 30px 10px 30px; 
@@ -1094,7 +1189,7 @@ option {
     }
 
     .blog-info .container {
-        margin: 40px 20px;
+        margin: 40px auto;
     }
 
     .blogImg {
@@ -1129,13 +1224,23 @@ option {
     .event_about_text_two {
         margin-left: 48px;
     }
+    .footer {
+        height: 30vh;
+    }
+    .container-address-footer {
+        width: 78%;
+        display: flex;
+        justify-content: center;
+    }
+    .address-footer {
+        font-size: 16px;
+        text-align: center;
+    }
 }
 
 
 @media all and (max-width: 912px) {
-    .container {
-        max-width: 800px;
-    }
+
     .menu_link {
         font-size: 15px;
     }
@@ -1146,41 +1251,58 @@ option {
     #skerderud {
         font-size: 11px; 
         padding-right: 160px;
+    }    
+    .main .container, 
+    .principles .container, 
+    .events .container, .meetings .container,
+    .services .container, .service-about .container, 
+    .blog .container {
+        max-width: 800px;
     }
-.events .container {
-    max-width: 900px;
-}
-.card-event {
-    width: 100%;
-}
-.meetings-list li {
-    font-size: 18px;
-}
-
+    .card-event {
+        width: 100%;
+    }
+    
+    .contacts .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .event_text {
+        font-size: 18px;
+    }
+    .meetings-list li {
+        font-size: 18px;
+    }
     .main-foto img {
         width: 350px;
         height: 440px;
     }
-.principles .container {
-    max-width: 100%;
-}
-.principles-item {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.imgPsy {
-    width: 45%;
-}
-.containerPsyAbout {
-    margin: 0 10px 10px 10px;
-}
-.blog-info .container {
-    margin: 30px auto;
-}
-.blogImg {
-    width: 310px;
-    height: 190px;
-}
+    .containerPsyInfo {
+        flex-direction: column;
+    }
+    .psyInfoLink {
+        text-align: start;
+    }
+    .principles .container {
+        max-width: 100%;
+    }   
+    .principles-item {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .imgPsy {
+        width: 45%;
+    }
+    .containerPsyAbout {
+        margin: 0 10px 10px 10px;
+    }
+    .blog-info .container {
+        margin: 30px auto;
+    }
+    .blogImg {
+        width: 310px;
+        height: 190px;
+    }
     .blogText {
         font-size: 20px;
     } 
@@ -1190,6 +1312,19 @@ option {
     .event_about_text_two {
         margin-left: 0px;
     }
+    .text-input-message {
+        height: 150px;
+    }
+    .boxContactUs .btnContacts {
+        margin-top: 100px;
+    }
+    .b2b-image {
+        display: flex;
+        align-items: center;
+    }
+    .footer {
+        height: 15vh;
+    }
 }
 
 
@@ -1197,14 +1332,43 @@ option {
 
     .welcome-pharase {
         font-size: 35px;
+        margin: 0 auto;
+    }
+    .specialistAbout {
+        display: flex;
+        justify-content: center;
+    }
+    .main .container, 
+    .specialistAbout .container,
+    .principles .container, 
+    .events .container,
+    .meetings .container, 
+    .services .container,
+    .service-about .container,
+    .left-right .container,
+    .blog .container {
+        max-width: 760px;
+    }
+    .specialists .container {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .aboutUs {
+        width: 750px;
+    }
+    .imgPsy {
+        width: 40%;
     }
     .psychologistText {
         margin: 20px 5px;
         font-size: 18px;
     }
+    .container-specialistAbout {
+        display: flex;
+        justify-content: center;
+    }
     .containerPsyAbout {
-        margin: 0 50px 10px 30px; 
-        width: 75%;
+        width: 80%;
     }
     .psyTop {
         font-size: 21px;
@@ -1220,6 +1384,22 @@ option {
         display: flex;
         flex-direction: column;
         margin: 20px 0;
+    }
+    .b2b-image {
+        justify-content: center;
+    }
+    .b2b-about {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 0;
+    }
+    .b2b-about h5 {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .b2b-about .further {
+        padding: 15px;
     }
     .main-info p {
         font-size: 18px;
@@ -1245,6 +1425,7 @@ option {
     } 
     .article {
         font-size: 17px;
+        text-indent: 0;
     }
     .shopping-item {
         font-size: 16px;
@@ -1260,7 +1441,6 @@ option {
         width: 580px;
         margin: 5px auto;
     }
-
     .address {
         padding: 5px 20px;
     }
@@ -1273,30 +1453,96 @@ option {
 
 
 @media all and (max-width: 768px) {
-.menu_item:not(:last-child) {
-    margin-right: 20px;
-}
 
-.welcome-pharase {
-    font-size: 30px;
-}
+    /* burger-menu */
+    .menu {
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        background-color: #f3f3f3;
+        text-align: center;
+        right: 0;
+        left: 0;
+        margin-top: 20px;
+        z-index: 1;
+    }
+
+    .menu li a {
+        color: #54a8b3;
+        display: block;
+        padding: 16px;
+    }
+
+    .menu li {
+        transition: all .5s;
+    }
+
+    .menu li:hover {
+        background-color: #e7e7e7;
+    }
+
+    #checkbox_toggle:checked ~ .menu {
+        display: block;
+        max-height: 100%;
+        transition: all .5s;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 20px 0;
+    }
+
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line {
+        background-color: transparent;
+    }
+    
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+
+
+    .welcome-pharase {
+        font-size: 30px;
+    }
     .fraza {
         font-size: 13px;
         padding-left: 90px;
     }
-.container .homePage {
-    margin-left: 10px;
-}
+    .main .container, 
+    .principles .container, 
+    .events .container,
+    .meetings .container, 
+    .services .container, 
+    .contacts .container,
+    .service-about .container,
+    .blog .container {
+        max-width: 740px;
+    }
+    .container .homePage {
+        margin-left: 10px;
+    }
     .container-specialistAbout {
         flex-direction: column;
     }
+    .container-specialistAbout .container{
+        display: flex;
+        justify-content: center;
+    }
     .psySpecialist {
-        margin-left: 0px;
+        margin: 0 auto;
     }
     .containerPsyAbout {
         margin: 10px auto;
         width: 90%;
     }
+    
     .psyCredo {
         font-size: 16px;
     }
@@ -1309,7 +1555,7 @@ option {
         margin-left: 40px;
     }
     .container .service-text {
-        margin: 10px 30px;
+        margin:  30px;
     }
     .container .article {
         margin: 20px 30px;
@@ -1324,36 +1570,29 @@ option {
     .blog h2 {
         font-size: 28px;
     }
+    .articleBlock {
+        width: 740px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .articleBlock .shopping {
+        text-align: center;
+        margin: 20px;
+    }
+    .shopping-item {
+        font-size: 18px;
+        font-weight: bolder;
+        padding-left: 25px;
+    }
+    .boxContactUs .btnContacts {
+        margin-top: 50px;
+    }
+    .footer {
+        height: 20vh;
+    }
 }
 
-
-
 @media all and (max-width: 540px) {
-    .header__burger-btn {
-        display: block;
-    }
-    .menu {
-        position: absolute;
-        left: -350px;
-        top: 0;
-        width: 350px;
-        background-color: #54a8b3; 
-        padding: 80px 20px 20px 20px;
-        transition: transform .8s;
-    }
-    .menu_list {
-        display: block;
-    }
-    .menu_link {
-        color: white;
-        font-size: 21px;
-        display: block;
-        padding: 10px 0;
-    }
-    .header.open .menu {
-        transform: translateX(100%);
-        z-index: 1;
-    }
 
     .slide_viewer {
         height: 220px;
@@ -1362,8 +1601,14 @@ option {
         font-size: 15px;
         padding: 0 10px;
     }
-
-    .events .container {
+    .line .container,
+    .events .container, 
+    .contacts .container,
+    .meetings .container, 
+    .principles .container,
+    .service-about .container,
+    .blog .container,
+    .services .container  {
         max-width: 500px;
     }
     .titles {
@@ -1372,26 +1617,22 @@ option {
     .titles h2 {
         font-size: 30px;
         margin-bottom: 25px;
+        margin-left: 30px;
     }
-
     .card-event {
         display: flex;
         flex-direction: column;
         height: 80%;
     }
-    .card-event-one {
-        width: 100%;
-    }
     .titles .event-subtitle {
-        font-size: 20px
+        font-size: 20px;
     }
     .cards .event_text {
         font-size: 18px;
     }
-.event_about_one h4 {
-    font-size: 20px;
-}
-
+    .event_about h4 {
+        font-size: 20px;
+    }
     .card-event-two {
         width: 100%;
         border-radius: 0 0 20px 20px;
@@ -1403,10 +1644,10 @@ option {
     .card-event-two button {
         margin: 15px auto;
     }
-    .meetings .container {
-        max-width: 500px;
+    option {
+        font-size: 14px;
+        padding: 5px;
     }
-
     .container .main-info-foto {
         max-width: 500px;
         display: flex;
@@ -1415,15 +1656,15 @@ option {
     .main-foto {
         display: flex;
         justify-content: center;
+        padding: 10px 0 10px 50px;
     }
-
-    .principles .container {
-        max-width: 500px;
-    }
+    
     .ourPrinciples {
         width: 100%;
     }
-
+    .aboutUs {
+        width: 500px
+    }
     .imgPsy {
         width: 80%;
     }
@@ -1437,14 +1678,25 @@ option {
         font-size: 18px;
     }
     .button {
-        width: 460px;
+        width: 400px;
     }
-
+    .meetings-list, .event_about_text {
+        padding-inline-start: 0;
+    }
+    .event_text {
+        padding: 0;
+    }
+    .card-event-one {
+        width: 100%;
+    }
     .service-picture img {
         width: 450px;
         height: 290px;
     }
-
+    ul {
+        padding-inline-start: 0;
+        text-align: justify;
+    }
     .containerAddress {
         width: 100%;
         margin: 10px auto;
@@ -1455,15 +1707,74 @@ option {
     .addressMap {
         width: 100%;
     }
+    .containerPsyInfo {
+        flex-direction: column;
+    }
+    .b2b-image img {
+        margin: 0;
+    }
+    .b2b-about h5 {
+        text-indent: 0;
+    }
+    .container .articleBlock {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+    .articleBlock {
+        padding: 50px;
+    }
+    .shopping {
+        text-align: center;
+        margin: 20px auto;
+    }
+    ol {
+        padding-inline-start: 0;
+    }
+    .shopping-item {
+        font-size: 18px;
+        padding-left: 25px;
+    }
+    .service-tabel .container {
+        width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .titles h3 {
+        text-align: center;
+    }
+    .footer {
+        height: 30vh;
+    }
 }
 
 @media all and (max-width: 414px) {
     .button {
         width: 300px;
         font-size: 18px;
+        padding: 20px 30px;
     }
-    .contacts .container {
-        max-width: 400px;
+    .carousel .container, .welcome .container, 
+    .line .container, .events .container, 
+    .services .container,
+    .contacts .container, .container .main-info-foto,
+    .principles .container, .meetings .container,
+    .service-about .container, .blog .container {
+        max-width: 380px;
+        margin: 0 10px;
+    }
+    .container .main-info-foto {
+        margin: 0 auto;
+    }
+    .main-foto {
+        padding: 10px;
+    }
+    .main-text {
+        margin-left: 15px; 
+        margin-right: 15px;
+    }
+    .aboutUs {
+        width: 380px
     }
     .formContactUs form {
         width: 100%;
@@ -1471,43 +1782,84 @@ option {
     select, .text-input-events {
         width: 300px;
     }
-.psyInfo {
-    width: 400px;
-}
-.containerPsyInfo {
-    flex-direction: column;
-}
-.b2b-image img {
-    width: 350px;
-    height: 250px;
-    margin-left: 10px;
-}
-.service-picture img {
-    width: 350px;
-    height: 250px;
-}
-.map {
-    width: 350px;
-}
-.event_about_text {
-    margin-left: 0;
-}
-.container .articleBlock {
-    width: 100%;
-    margin: 0 ;
-}
-.articleBlock .article {
-    margin-left: -10px;
-}
-.article li {
-    margin-left: -25px;
-}
-.service-picture h4 {
-    font-size: 20px;
-}
+    .psyInfo {
+        width: 380px;
+    }
+    
+    .b2b-image img {
+        width: 350px;
+        height: 250px;
+        margin-left: 10px;
+    }
+    .service-picture img {
+        width: 350px;
+        height: 250px;
+    }
+    .service-tabel .container {
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+    }
+    .map {
+        width: 350px;
+    }
+    .event_about_text {
+        margin-left: 0;
+    }
+    ol {
+        margin-left: 13px;
+    }
+    .service-picture h4 {
+        font-size: 20px;
+    }
+    .boxPsyDiplom img {
+        width: 370px;
+    }
+    .service-tabel .container {
+        margin: 0 auto;
+        width: 380px;
+        padding: 30px 20px;
+    }
+    .boxContactUs .btnContacts {
+        margin-top: 30px;
+    }
+    .left-right .container {
+        margin: 40px auto;
+    }
 }
 
-@media all and (max-width: 392px) {
+@media all and (max-width: 393px) {
+    .carousel .container, .welcome .container, 
+    .line .container, .events .container, 
+    .contacts .container, .principles .container,
+    .service-about .container, .blog .container,
+    .meetings .container, .credo .container,
+    .services .container, .service-tabel .container,
+    .blog .container, .container .article {
+        max-width: 340px;
+        margin: 10px auto;
+    }
+    .slide_viewer {
+        height: 180px;
+    }
+    .welcome-pharase {
+        font-size: 25px;
+    }
+    #skerderud {
+        padding-right: 60px;
+    }
+    ul {
+        padding-inline-start: 8px; 
+    }
+    .title_meetings h3 {
+        margin-bottom: 30px;
+    }
+    .meetings-list {
+        margin-bottom: 10px;
+    }
+    ol.article {
+        padding: 10px;
+    }
     .container .main-info-foto {
         max-width: 350px;
     }
@@ -1527,13 +1879,18 @@ option {
         margin-left: 20px;
     }
     #textPrinciples {
-        margin-left: 0;
+        text-align: center;
+        margin-left: 0; 
     }
     .principles-item {
         margin-left: 0;
+        line-height: 1.5em;
+    }
+    .aboutUs {
+        width: 356px;
     }
     .imgPsy {
-        width: 100%;
+        width: 330px;
     }
     .psychologistHeading {
         padding-bottom: 0;
@@ -1544,28 +1901,41 @@ option {
     .home .container {
         margin-left: 0;
     }
-    .container {
-        max-width: 350px;
+    .titles h2 {
+        margin-left: 0;
+        font-size: 25px;
     }
     .psyInfo {
         width: 350px;
     }
     .containerPsyAbout {
-        margin: 0 0 20px 0;
+        margin: 10px auto;
         width: 330px;
+    }
+    .container-specialistAbout {
+        display: flex;
+        align-items: center;
+    }
+    .psySpecialist {
+        justify-self: center;
+        align-self: center;
     }
     .containerPsyInfo {
         padding: 0;
         width: 100%;
     }
     .boxPsyInfoLink {
-        margin: 0;
+        margin: 10px;
     }
-    .credo .container {
-        width: 100%;
+    .specialisation {
+        text-align: start;
     }
     .psyCredo {
         width: 100%;
+    }
+    .button {
+        font-size: 16px;
+        padding: 25px 60px;
     }
     .services .container {
         padding: 0;
@@ -1577,7 +1947,9 @@ option {
     .b2b-image img {
         width: 300px;
         height: 210px;
-        
+    }
+    .b2b-about {
+        max-width: 310px;
     }
     .b2b-about h5 {
         text-indent: 0;
@@ -1595,9 +1967,10 @@ option {
     }
     .service-picture hr {
         width: 80%;
+        bottom: 15px;
     }
     .container .service-text {
-        margin: 0;
+        margin-top: 30px;
     }
     .service-tabel .container{
         margin: 0;
@@ -1618,6 +1991,21 @@ option {
     .shopping-item {
         font-size: 18px;
         font-weight: bolder;
+        padding-left: 0;
+    }
+    .formContactUs, .containerAddress {
+        width: 340px;
+    }
+    .telephoneContact {
+        margin-left: 9px;
+        padding: 20px;
+    }
+    .address { 
+        margin-left: 15px;
+        padding: 5px;
+    }
+    .addressMap {
+        margin-left: 9px;
     }
     .map {
         width: 270px;
@@ -1628,14 +2016,25 @@ option {
 }
 
 @media all and (max-width: 280px) {
-    .container {
+    .header {
+        width: 100%;
+        padding: 0 8px;
+    }
+    .carousel .container, .welcome .container, 
+    .line .container, .events .container, 
+    .contacts .container, .service-about .container,
+    .blog .container, .meetings .container {
         max-width: 260px;
     }
     .slide_viewer {
-        height: 150px;
+        height: 110px;
+    }
+    .welcome {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .welcome-pharase {
-        font-size: 25px;
+        font-size: 22px;
     }
     #skerderud {
         padding-right: 30px;
@@ -1644,14 +2043,16 @@ option {
         font-size: 23px;
     }
     .events .container {
-        max-width: 270px;
+        max-width: 260px;
         padding: 0;
     }
     .event-subtitle {
-        font-size: 18px;
+        font-size: 16px;
     }
     .container .cards {
-        width: 100%;
+        width: 96%;
+        margin: 5px;
+        padding: 5px;
     }
 
     .button {
@@ -1661,18 +2062,39 @@ option {
     .copyright {
         font-size: 11px;
     }
+    .contacts .container {
+        max-width: 260px;
+        align-items: center;
+    }
+    .formContactUs {
+        width: 260px;
+        margin: 0 auto;
+    }
     .card-event-one {
-        padding-inline-start: 0px;
+        padding-inline-start: 5px;
+        padding: 8px;
     }
     .event-text {
         padding: 0;
     }
+    .event_item {
+        font-size: 14px;
+    }
     .event_about_one ul {
         padding-inline-start: 5px;
     }
-    .meetings .container {
-        max-width: 270px;
-        /* padding: 0; */
+    .credo .container {
+        padding: 30px 10px;
+    }
+    
+    select, .text-input-events {
+        width: 230px;
+    }
+    .cards .event_text {
+        font-size: 16px;
+    }
+    .event_about_text li {
+        font-size: 16px;
     }
     .meetings .container ul {
         padding: 0;
@@ -1680,6 +2102,10 @@ option {
     .meetings-list li {
         font-size: 16px;
     }
+    .event_about_text  {
+        padding: 20px 0;
+    }
+
     .boxContactUs {
         margin: 0;
     }
@@ -1690,7 +2116,9 @@ option {
         width: 100%;
     }
     .containerAddress {
-        margin: auto;
+        width: 260px;
+        margin-left: 7px;
+        padding-top: 10px;
     }
     .telephoneContact {
         padding: 5px;
@@ -1707,9 +2135,11 @@ option {
     .main-foto img {
         width: 230px;
         height: 300px;
+        margin-left: 0;
     }
-    .principles .container {
-        max-width: 270px;
+    .main .container, .principles .container,
+    .service-tabel .container {
+        max-width: 260px;
     }
     .ourPrinciples {
         padding: 5px;
@@ -1717,6 +2147,9 @@ option {
     .specialist {
         width: 240px;
         height: 350px;
+    }
+    .aboutUs {
+        width: 270px;
     }
     .imgPsy {
         width: 260px;
@@ -1736,7 +2169,16 @@ option {
     }
     .containerPsyAbout, .containerPsyInfo {
         width: 260px;
-        margin-left: -15px;
+    }
+    .psyHeading {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .psychologistText {
+        font-size: 16px;
+    }
+    .psyInfoLink {
+        font-size: 16px;
     }
     .credo {
         display: flex;
@@ -1744,7 +2186,10 @@ option {
     }
     .credo .container {
         padding: 10px 15px;
-        margin-left: 15px;
+        width: 260px;
+    }
+    .psyCredo {
+        font-size: 16px;
     }
     .container .main-info {
         margin: 10px;
@@ -1752,9 +2197,13 @@ option {
     .b2b-image img {
         width: 250px;
         height: 180px;
+        margin: 0 auto;
     }
     .b2b-about {
         padding: 10px 5px;
+    }
+    .container .service-text {
+        margin: 30px 10px;
     }
     .service-about .container {
         padding: o 10px;
@@ -1775,7 +2224,28 @@ option {
         font-size: 16px;
     }
 
-    
+    .article li {
+        text-align: start;
+    }
+    .titles h2 {
+        text-align: center;
+    }
+    .titles h3 {
+        font-size: 20px;
+    }
+    .footer {
+        height: 34vh;
+    }
+    .container-address-footer {
+        width: 85%;
+    }
+    .address-footer {
+        font-size: 14px;
+    }
+
+    .boxPsyDiplom img {
+        width: 260px;
+    }
 }
 
 
