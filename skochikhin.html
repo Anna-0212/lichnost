@@ -13,22 +13,22 @@
 </head>
 <body>
 
-<header class="header open">
-    <div class="container header_container">
+    <header class="header">
+        <!-- <div class="container header_container"> -->
+            <div>
 
-        <!-- кнопка бургера -->
-        <button class="header__burger-btn" id="burger">
-            <span></span><span></span><span></span>
-        </button>
-
-        <!-- лого -->
+    <nav class="navbar">
+        <!-- LOGO -->
         <a href="index.html" class="logo"> 
             <img class="logo_img" href="index.html" src="images/lichnost.png" alt="Lichnost" > 
         </a>
-
-        <!-- меню -->
-        <nav class="menu">
-            <ul class="menu_list">
+    
+        <!-- menu  -->
+        <ul class="nav-links">
+            <!-- button burger  -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+            <div class="menu">
                 <li class="menu_item">
                     <a class="menu_link" href="we.html" >О нас</a>
                 </li>
@@ -47,8 +47,9 @@
                 <li class="menu_item">
                     <a class="menu_link" href="contacts.html" > Контакты</a>
                 </li>
-            </ul>
-        </nav>
+            </div>
+        </ul>
+    </nav>
     </div>
 </header>
 
@@ -79,12 +80,12 @@
                 <h6 class="psyTop">Профессиональная деятельность </h6>
                 <div class="containerPsyInfo"> 
                     <ul class="boxPsyInfo">
-                        <li class="psyInfoLink">психологическое консультирование </li>
-                        <li class="psyInfoLink">психокоррекция в кризисных и экстремальных ситуациях</li>
-                        <li class="psyInfoLink">психотерапия и психокоррекция детей и подростков</li>
-                        <li class="psyInfoLink">индивидуальная и групповая психотерапия</li>
-                        <li class="psyInfoLink">авторские тренинги </li>
-                        <li class="psyInfoLink">работа со взрослыми, подростками и детьми</li>
+                        <li class="psyInfoLink specialisation">- психологическое консультирование </li>
+                        <li class="psyInfoLink specialisation">- психокоррекция в кризисных и экстремальных ситуациях</li>
+                        <li class="psyInfoLink specialisation">- психотерапия и психокоррекция детей и подростков</li>
+                        <li class="psyInfoLink specialisation">- индивидуальная и групповая психотерапия</li>
+                        <li class="psyInfoLink specialisation">- авторские тренинги </li>
+                        <li class="psyInfoLink specialisation">- работа со взрослыми, подростками и детьми</li>
                     </ul>
                 </div>
             </div>
@@ -92,18 +93,18 @@
                 <h6 class="psyTop">Специализация помощи в личной терапии: </h6>
                 <div class="containerPsyInfo"> 
                     <ul class="boxPsyInfo">
-                        <li class="psyInfoLink">посттравматическое стрессовое расстройство (ПТСР) </li>
-                        <li class="psyInfoLink">потери близких</li>
-                        <li class="psyInfoLink">депрессии </li>
-                        <li class="psyInfoLink">тревожность</li>
-                        <li class="psyInfoLink">страхи</li>
+                        <li class="psyInfoLink specialisation">- посттравматическое стрессовое расстройство (ПТСР) </li>
+                        <li class="psyInfoLink specialisation">- потери близких</li>
+                        <li class="psyInfoLink specialisation">- депрессии </li>
+                        <li class="psyInfoLink specialisation">- тревожность</li>
+                        <li class="psyInfoLink specialisation">- страхи</li>
                     </ul>
                     <ul class="boxPsyInfo">
-                        <li class="psyInfoLink">фобии</li>
-                        <li class="psyInfoLink">семейные кризисы</li>
-                        <li class="psyInfoLink">конфликты на работе</li>
-                        <li class="psyInfoLink">затруднения в межличностных коммуникациях</li>
-                        <li class="psyInfoLink">самопознание</li>
+                        <li class="psyInfoLink specialisation">- фобии</li>
+                        <li class="psyInfoLink specialisation">- семейные кризисы</li>
+                        <li class="psyInfoLink specialisation">- конфликты на работе</li>
+                        <li class="psyInfoLink specialisation">- затруднения в межличностных коммуникациях</li>
+                        <li class="psyInfoLink specialisation">- самопознание</li>
                     </ul>
                 </div>
             </div>
@@ -115,15 +116,15 @@
     <div class="container"> 
         <h6 class="psyTop">Образование</h6>
         <ul class="boxPsyInfoLink">
-            <li class="psyInfoLink">Институт психотерапии и клинической психологии, «Практическая психотерапия и консультирование 
+            <li class="psyInfoLink">- Институт психотерапии и клинической психологии, «Практическая психотерапия и консультирование 
                 с применением краткосрочной терапии», практический психолог </li>
-            <li class="psyInfoLink">Институт групповой и семейной психологии и психотерапии, «Систематический курс эриксоновского гипноза»</li>
-            <li class="psyInfoLink">Московский институт психоанализа, «Сексология и сексопатология»</li>
-            <li class="psyInfoLink">Институт современного НЛП Михаила Пелехатого, «НЛП-практик» </li>
-            <li class="psyInfoLink">Институт психотерапии и клинической психологии, «Психология кризисных и экстремальных 
+            <li class="psyInfoLink">- Институт групповой и семейной психологии и психотерапии, «Систематический курс эриксоновского гипноза»</li>
+            <li class="psyInfoLink">- Московский институт психоанализа, «Сексология и сексопатология»</li>
+            <li class="psyInfoLink">- Институт современного НЛП Михаила Пелехатого, «НЛП-практик» </li>
+            <li class="psyInfoLink">- Институт психотерапии и клинической психологии, «Психология кризисных и экстремальных 
                 ситуаций. Практические инструменты психокоррекции»</li>
-            <li class="psyInfoLink">Институт психотерапии и клинической психологии, «Техники психодрамы  в групповом и индивидуальном консультировании» </li>
-            <li class="psyInfoLink">Институт психотерапии и клинической психологии, «Психотерапия и психокоррекция детей и подростков»</li>
+            <li class="psyInfoLink">- Институт психотерапии и клинической психологии, «Техники психодрамы  в групповом и индивидуальном консультировании» </li>
+            <li class="psyInfoLink">- Институт психотерапии и клинической психологии, «Психотерапия и психокоррекция детей и подростков»</li>
         </ul>
     </div>
 </section>
@@ -156,7 +157,6 @@
     </div>
 </section>
 
-
 <footer class="footer">
     <div class="container">
         <div class="container-social-media">
@@ -170,8 +170,11 @@
                 <img class="socialMedia" src="images/footer/vk.png" alt="VK">
             </a>
         </div>
+        <div class="container-address-footer">
+            <p class="address-footer">108814, Москва, пос.Сосенское, д.Сосенки, БЦ "Дубровка Плаза", ул.Сосновая, д.1Б, этаж 4, офис 405, +7 (985) 143-65-06</p>
+        </div>
         <div class="container-copyright">
-            <p class="copyright"> Психологический центр «Личность»<img class="copy-logo" src="images/footer/copyright.png" alt="copyright">2022 </p>
+            <p class="copyright"> Психологический центр «Личность»<img class="copy-logo" src="images/footer/copyright.png" alt="copyright">2023 </p>
         </div>
     </div>
 </footer>
@@ -183,12 +186,7 @@
     </a>
 </section>  
 
-    
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script> -->
-
     <script defer src="script.js"></script>
+
 </body>
 </html>
