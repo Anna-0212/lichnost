@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function() {
-        document.querySelector("header").classList.toggle("open")
-    })
-})
-
 gsap.to(".fraza", {text: "Быть современным человеком означает быть переполненным информацией и отношениями. От этого возникает опасность потерять контакт с самим собой.", duration: 6, ease: "power1.in",  delay: 2});
 gsap.to("#skerderud", {text: "Финн Скэрдеруд", duration: 6,  ease: "power1.in", delay: 8});
 
