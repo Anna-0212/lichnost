@@ -13,22 +13,22 @@
 </head>
 <body>
 
-<header class="header open">
-    <div class="container header_container">
+    <header class="header">
+        <!-- <div class="container header_container"> -->
+            <div>
 
-        <!-- кнопка бургера -->
-        <button class="header__burger-btn" id="burger">
-            <span></span><span></span><span></span>
-        </button>
-
-        <!-- лого -->
+    <nav class="navbar">
+        <!-- LOGO -->
         <a href="index.html" class="logo"> 
             <img class="logo_img" href="index.html" src="images/lichnost.png" alt="Lichnost" > 
         </a>
-
-        <!-- меню -->
-        <nav class="menu">
-            <ul class="menu_list">
+    
+        <!-- menu  -->
+        <ul class="nav-links">
+            <!-- button burger  -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+            <div class="menu">
                 <li class="menu_item">
                     <a class="menu_link" href="we.html" >О нас</a>
                 </li>
@@ -47,11 +47,11 @@
                 <li class="menu_item">
                     <a class="menu_link" href="contacts.html" > Контакты</a>
                 </li>
-            </ul>
-        </nav>
+            </div>
+        </ul>
+    </nav>
     </div>
 </header>
-
 
 <section class="home"> 
     <div class="container"> 
@@ -78,10 +78,10 @@
                 <h6 class="psyTop">Профессиональная деятельность </h6>
                 <div class="containerPsyInfo"> 
                     <ul class="boxPsyInfo">
-                        <li class="psyInfoLink">психологическое консультирование </li>
-                        <li class="psyInfoLink">индивидуальная и групповая психотерапия</li>
-                        <li class="psyInfoLink">психодиагностика</li>
-                        <li class="psyInfoLink">работа со взрослыми</li>
+                        <li class="psyInfoLink specialisation">- психологическое консультирование </li>
+                        <li class="psyInfoLink specialisation">- индивидуальная и групповая психотерапия</li>
+                        <li class="psyInfoLink specialisation">- психодиагностика</li>
+                        <li class="psyInfoLink specialisation">- работа со взрослыми</li>
                     </ul>
                 </div>
             </div>
@@ -89,16 +89,16 @@
                 <h6 class="psyTop">Специализация помощи в личной терапии: </h6>
                 <div class="containerPsyInfo"> 
                     <ul class="boxPsyInfo">
-                        <li class="psyInfoLink">тревожность</li>
-                        <li class="psyInfoLink">чувство вины</li>
-                        <li class="psyInfoLink">одиночество</li>
-                        <li class="psyInfoLink">семейные кризисы</li>
+                        <li class="psyInfoLink specialisation">- тревожность</li>
+                        <li class="psyInfoLink specialisation">- чувство вины</li>
+                        <li class="psyInfoLink specialisation">- одиночество</li>
+                        <li class="psyInfoLink specialisation">- семейные кризисы</li>
                     </ul>
                     <ul class="boxPsyInfo">
-                        <li class="psyInfoLink">работа с личными границами</li>
-                        <li class="psyInfoLink">неуверенность в себе и проблемы с самоценностью</li>
-                        <li class="psyInfoLink">созависимость и слияние</li>              
-                        <li class="psyInfoLink">психосоматика</li>
+                        <li class="psyInfoLink specialisation">- работа с личными границами</li>
+                        <li class="psyInfoLink specialisation">- неуверенность в себе и проблемы с самоценностью</li>
+                        <li class="psyInfoLink specialisation">- созависимость и слияние</li>              
+                        <li class="psyInfoLink specialisation">- психосоматика</li>
                     </ul>
                 </div>
             </div>
@@ -110,17 +110,17 @@
     <div class="container"> 
         <h6 class="psyTop">Образование</h6>
         <ul class="boxPsyInfoLink">
-            <li class="psyInfoLink">Российский университет дружбы народов, Кафедра прикладной психологии и психотерапии, 
+            <li class="psyInfoLink">- Российский университет дружбы народов, Кафедра прикладной психологии и психотерапии, 
                 «Психолог консультант» </li>
-            <li class="psyInfoLink">Межрегиональная академия управления персоналом, «Аналитик»</li>
-            <li class="psyInfoLink">Национальный авиационный университет, «Юрист»</li>
-            <li class="psyInfoLink">Международная Академия исследования лжи, «Профессиональный переговорщик»  </li>
-            <li class="psyInfoLink">Институт современного НЛП Михаила Пелехатого, «НЛП-практик»  </li>
-            <li class="psyInfoLink">Московский психолого-социальный университет, «Метафорические  ассоциативные карты, 
+            <li class="psyInfoLink">- Межрегиональная академия управления персоналом, «Аналитик»</li>
+            <li class="psyInfoLink">- Национальный авиационный университет, «Юрист»</li>
+            <li class="psyInfoLink">- Международная Академия исследования лжи, «Профессиональный переговорщик»  </li>
+            <li class="psyInfoLink">- Институт современного НЛП Михаила Пелехатого, «НЛП-практик»  </li>
+            <li class="psyInfoLink">- Московский психолого-социальный университет, «Метафорические  ассоциативные карты, 
                 как инструмент практикующего психолога»,  «Использование метафорических ассоциативных карт в 
                 консультировании клиента с проблемами в самоотношении»,  «Использование метафорических ассоциативных 
                 карт в консультировании клиента с проблемами в межличностных отношениях» </li>
-            <li class="psyInfoLink">Участник семинара-тренинга «Предпосылки формирования самоценности» </li>    
+            <li class="psyInfoLink">- Участник семинара-тренинга «Предпосылки формирования самоценности» </li>    
         </ul>
     </div>
 </section>
@@ -156,9 +156,6 @@
     </div>
 </section>
 
-
-
-
 <footer class="footer"> 
     <div class="container">
         <div class="container-social-media">
@@ -172,8 +169,11 @@
                 <img class="socialMedia" src="images/footer/vk.png" alt="VK">
             </a>
         </div>
+        <div class="container-address-footer">
+            <p class="address-footer">108814, Москва, пос.Сосенское, д.Сосенки, БЦ "Дубровка Плаза", ул.Сосновая, д.1Б, этаж 4, офис 405, +7 (985) 143-65-06</p>
+        </div>
         <div class="container-copyright">
-            <p class="copyright"> Психологический центр «Личность»<img class="copy-logo" src="images/footer/copyright.png" alt="copyright">2022 </p>
+            <p class="copyright"> Психологический центр «Личность»<img class="copy-logo" src="images/footer/copyright.png" alt="copyright">2023 </p>
         </div>
     </div>
 </footer>
@@ -185,12 +185,7 @@
     </a>
 </section>  
 
-    
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script> -->
-
     <script defer src="script.js"></script>
+
 </body>
 </html>
