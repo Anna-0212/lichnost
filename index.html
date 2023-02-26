@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личность</title>
+    <title>Психологический центр «Личность»</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,30 +13,31 @@
 </head>
 <body>
 
-<header class="header open">
-    <div class="container header_container">
 
-        <!-- кнопка бургера -->
-        <button class="header__burger-btn" id="burger">
-            <span></span><span></span><span></span>
-        </button>
+<header class="header">
+        <!-- <div class="container header_container"> -->
+    <div>
 
-        <!-- лого -->
+    <nav class="navbar">
+        <!-- LOGO -->
         <a href="index.html" class="logo"> 
             <img class="logo_img" href="index.html" src="images/lichnost.png" alt="Lichnost" > 
         </a>
-
-        <!-- меню -->
-        <nav class="menu">
-            <ul class="menu_list">
+    
+        <!-- menu  -->
+        <ul class="nav-links">
+            <!-- button burger  -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+            <div class="menu">
                 <li class="menu_item">
-                    <a class="menu_link" href="we.html">О нас</a>
+                    <a class="menu_link" href="we.html" >О нас</a>
                 </li>
                 <li class="menu_item">
-                    <a class="menu_link" href="about.html">Специалисты</a>
+                    <a class="menu_link" href="about.html" >Специалисты</a>
                 </li>
                 <li class="menu_item">
-                    <a class="menu_link" href="bb.html">Услуги В2В</a>
+                    <a class="menu_link" href="bb.html" >Услуги В2В</a>
                 </li>
                 <li class="menu_item">
                     <a class="menu_link" href="bc.html" >Услуги В2С</a>
@@ -47,8 +48,9 @@
                 <li class="menu_item">
                     <a class="menu_link" href="contacts.html" > Контакты</a>
                 </li>
-            </ul>
-        </nav>
+            </div>
+        </ul>
+    </nav>
     </div>
 </header>
 
@@ -92,7 +94,7 @@
     </div>
 </section>
 
-<section> 
+<section class="line"> 
     <div class="container">
         <div class="lines">
             <hr class="blue">
@@ -111,7 +113,6 @@
     </div>
 </section>
 
-
 <section class="events">
     <div class="container">
         <div class="titles">
@@ -125,7 +126,7 @@
         <div class="cards"> 
             <div class="card-event">
                 <div class="card-event-one"> 
-                    <h3 class="event-subtitle">Терапевтическая группа <br>для подростков 14-18 лет<br> «Формирование позитивных жизненных целей»</h3>
+                    <h3 class="event-subtitle">Терапевтическая группа <br> для подростков <br> «Формирование позитивных жизненных целей»</h3>
                     <br>
                     <p class="event-text">Участие подростков в терапевтической группе с опытными психологами позволит
                     подростку сформировать адекватную самооценку, повысить уверенность в себе, развить
@@ -141,7 +142,7 @@
                             продолжительность встречи 2 часа </li>
                         <li class="event_item">
                             <img src="images/user.png" alt="user" class="event_icon">
-                            14-18 лет </li>
+                            11-14, 15-18 лет </li>
                     <br>
                         <li class="event_item">
                             <img src="images/banknotes.png" alt="money" class="event_icon">
@@ -168,7 +169,7 @@
                         успешного достижения целей»</h3>
                     <br>
                     <p class="event-text">За 2 дня семинара вы овладеете навыками эффективной коммуникации, научитесь лучше
-                        взаимодействовать с людьми, что значительно повысит эффективность достижение целей в
+                        взаимодействовать с людьми, что значительно повысит эффективность достижения целей в
                         любой сфере.</p>
                     <br>
                     <ul>
@@ -205,8 +206,7 @@
                     <h3 class="event-subtitle">Двухдневный семинар<br>«Современное ораторское мастерство»</h3>
                     <br>
                     <p class="event-text">За 2 дня семинара вы научитесь применять традиционные и современные приемы
-                        ораторского мастерства и риторики для выступлений, презентаций, видеоблогинга и много
-                        другого.</p>
+                        ораторского мастерства и риторики для выступлений, презентаций, видеоблогинга.</p>
                     <br>
                     <ul>
                         <li class="event_item">
@@ -238,7 +238,7 @@
                 <div class="card-event-one"> 
                     <h3 class="event-subtitle">Тренинг «Денежная энергия»</h3>
                     <br>
-                    <p class="event-text">Тренинг «Денежная энергия» покажет Вам под необычным углом зрения Ваши отношения
+                    <p class="event-text">Тренинг «Денежная энергия» покажет вам под необычным углом зрения ваши отношения
                         с деньгами, что позволит сформировать новые эффективные денежные стратегии.</p>
                     <br>
                     <ul>
@@ -288,8 +288,11 @@
                 <img class="socialMedia" src="images/footer/vk.png" alt="VK">
             </a>
         </div>
+        <div class="container-address-footer">
+            <p class="address-footer">108814, Москва, пос.Сосенское, д.Сосенки, БЦ "Дубровка Плаза", ул.Сосновая, д.1Б, этаж 4, офис 405, +7 (985) 143-65-06</p>
+        </div>
         <div class="container-copyright">
-            <p class="copyright"> Психологический центр «Личность»<img class="copy-logo" src="images/footer/copyright.png" alt="copyright">2022 </p>
+            <p class="copyright"> Психологический центр «Личность»<img class="copy-logo" src="images/footer/copyright.png" alt="copyright">2023 </p>
         </div>
     </div>
 </footer>
